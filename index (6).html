@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aryan Tiwari | COMPS Co-Captain Candidate</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  }
+
+body {
+background: #0f172a;
+color: white;
+overflow-x: hidden;
+}
+
+body::before {
+content: "";
+position: fixed;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background:
+radial-gradient(circle, #2563eb22 0%, transparent 25%),
+radial-gradient(circle, #7c3aed22 0%, transparent 25%),
+radial-gradient(circle, #0ea5e922 0%, transparent 30%);
+animation: bgMove 18s linear infinite;
+z-index: -2;
+}
+
+@keyframes bgMove {
+0% {
+transform: rotate(0deg);
+}
+
+100% {
+    transform: rotate(360deg);
+}
+}
+
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 7%;
+backdrop-filter: blur(18px);
+background: rgba(15, 23, 42, 0.7);
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+z-index: 1000;
+transition: 0.4s;
+}
+
+nav h2 {
+font-size: 28px;
+font-weight: 700;
+color: #60a5fa;
+letter-spacing: 2px;
+}
+
+nav ul {
+display: flex;
+gap: 24px;
+list-style: none;
+align-items: center;
+}
+
+nav ul li a {
+position: relative;
+text-decoration: none;
+color: #e2e8f0;
+font-size: 15px;
+transition: 0.3s;
+}
+
+nav ul li a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -7px;
+width: 0;
+height: 2px;
+background: #60a5fa;
+transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+color: #60a5fa;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+width: 100%;
+}
+
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 130px 9% 80px;
+gap: 70px;
+}
+
+.left {
+flex: 1;
+animation: leftSlide 1.2s ease;
+}
+
+.right {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+animation: rightSlide 1.2s ease;
+}
+
+.left h3 {
+font-size: 24px;
+color: #93c5fd;
+margin-bottom: 15px;
+}
+
+.left h1 {
+font-size: 65px;
+font-weight: 700;
+line-height: 1.1;
+margin-bottom: 15px;
+}
+
+.left h2 {
+font-size: 32px;
+margin-bottom: 25px;
+color: #38bdf8;
+min-height: 45px;
+}
+
+.cursor-line {
+animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+50% {
+opacity: 0;
+}
+}
+
+.left p {
+font-size: 18px;
+line-height: 34px;
+color: #cbd5e1;
+margin-bottom: 35px;
+max-width: 650px;
+}
+
+.hero-buttons {
+display: flex;
+gap: 18px;
+flex-wrap: wrap;
+}
+
+.hero-buttons a {
+text-decoration: none;
+}
+
+.left button {
+padding: 14px 30px;
+border: none;
+border-radius: 40px;
+background: #2563eb;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: 0.4s;
+box-shadow: 0 0 20px #2563eb55;
+}
+
+.left button i {
+margin-left: 8px;
+}
+
+.left button:hover {
+transform: translateY(-5px);
+background: #1d4ed8;
+box-shadow: 0 0 35px #2563eb;
+}
+
+.secondary-btn {
+background: transparent !important;
+border: 1px solid #3b82f6 !important;
+box-shadow: none !important;
+}
+
+.secondary-btn:hover {
+background: #2563eb !important;
+box-shadow: 0 0 25px #2563eb88 !important;
+}
+
+.image-wrapper {
+position: relative;
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.image-wrapper::before {
+content: "";
+position: absolute;
+inset: -15px;
+border-radius: 35px;
+border: 2px solid #2563eb66;
+animation: rotateRing 8s linear infinite;
+}
+
+.image-wrapper::after {
+content: "";
+position: absolute;
+inset: -28px;
+border-radius: 40px;
+border: 1px solid #7c3aed55;
+animation: rotateRing 12s linear infinite reverse;
+}
+
+.right img {
+position: relative;
+width: 390px;
+height: 440px;
+border-radius: 28px;
+object-fit: cover;
+object-position: center 18%;
+border: 5px solid #2563eb;
+box-shadow:
+0 0 40px rgba(59, 130, 246, 0.6),
+0 0 80px rgba(139, 92, 246, 0.3);
+transition: 0.5s;
+animation: float 5s ease-in-out infinite;
+z-index: 2;
+}
+
+.right img:hover {
+transform: scale(1.03);
+}
+
+@keyframes rotateRing {
+from {
+transform: rotate(0deg);
+}
+
+
+to {
+    transform: rotate(360deg);
+}
+
+
+}
+
+@keyframes float {
+0% {
+transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-15px);
+}
+
+100% {
+    transform: translateY(0);
+}
+
+
+}
+
+section {
+padding: 110px 9%;
+}
+
+section h1 {
+text-align: center;
+font-size: 46px;
+margin-bottom: 60px;
+position: relative;
+}
+
+section h1::after {
+content: "";
+position: absolute;
+bottom: -14px;
+left: 50%;
+transform: translateX(-50%);
+width: 90px;
+height: 4px;
+background: #3b82f6;
+border-radius: 20px;
+box-shadow: 0 0 15px #3b82f6;
+}
+
+.glass {
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(18px);
+padding: 45px;
+border-radius: 25px;
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+transition: 0.4s;
+max-width: 1100px;
+margin: auto;
+}
+
+.glass:hover {
+transform: translateY(-8px);
+border-color: #3b82f655;
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.glass p {
+font-size: 18px;
+line-height: 35px;
+color: #dbeafe;
+margin-bottom: 20px;
+}
+
+.glass p:last-child {
+margin-bottom: 0;
+}
+
+.timeline {
+max-width: 1000px;
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 25px;
+}
+
+.timeline-card {
+display: flex;
+align-items: flex-start;
+gap: 25px;
+padding: 30px;
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(18px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 22px;
+transition: 0.4s;
+}
+
+.timeline-card:hover {
+transform: translateX(8px);
+border-color: #3b82f666;
+box-shadow: 0 10px 35px rgba(37, 99, 235, 0.2);
+}
+
+.timeline-icon {
+min-width: 55px;
+height: 55px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 15px;
+background: #2563eb22;
+color: #60a5fa;
+font-size: 25px;
+}
+
+.timeline-date {
+color: #60a5fa;
+font-size: 14px;
+font-weight: 600;
+}
+
+.timeline-card h2 {
+font-size: 23px;
+margin: 5px 0;
+}
+
+.timeline-card h3 {
+color: #38bdf8;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+}
+
+.timeline-card p {
+color: #cbd5e1;
+line-height: 28px;
+}
+
+.timeline-card .score {
+color: #60a5fa;
+font-size: 20px;
+font-weight: 700;
+}
+
+.skill-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+gap: 25px;
+max-width: 1150px;
+margin: auto;
+}
+
+.skill-card {
+padding: 35px 20px;
+text-align: center;
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(18px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 22px;
+transition: 0.4s;
+}
+
+.skill-card i {
+font-size: 48px;
+color: #3b82f6;
+margin-bottom: 18px;
+transition: 0.4s;
+}
+
+.skill-card h3 {
+font-size: 17px;
+font-weight: 600;
+}
+
+.skill-card:hover {
+transform: translateY(-10px);
+border-color: #3b82f666;
+box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.skill-card:hover i {
+transform: scale(1.15);
+color: #60a5fa;
+}
+
+.project-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+gap: 30px;
+}
+
+.project-card {
+position: relative;
+overflow: hidden;
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(18px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 25px;
+padding: 32px;
+transition: 0.45s;
+}
+
+.project-card::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 4px;
+background: linear-gradient(90deg, #2563eb, #7c3aed, #06b6d4);
+}
+
+.project-card:hover {
+border-color: #3b82f666;
+box-shadow: 0 20px 50px rgba(37, 99, 235, 0.22);
+}
+
+.project-icon {
+width: 65px;
+height: 65px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 18px;
+background: #2563eb22;
+color: #60a5fa;
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+.project-number {
+color: #64748b;
+font-size: 14px;
+font-weight: 600;
+}
+
+.project-content h2 {
+font-size: 25px;
+margin: 5px 0 15px;
+}
+
+.project-content p {
+color: #cbd5e1;
+line-height: 28px;
+font-size: 15px;
+}
+
+.tags {
+display: flex;
+gap: 8px;
+flex-wrap: wrap;
+margin: 20px 0;
+}
+
+.tags span {
+padding: 6px 12px;
+border-radius: 20px;
+background: #2563eb22;
+border: 1px solid #3b82f644;
+color: #93c5fd;
+font-size: 12px;
+}
+
+.project-link a {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+color: #60a5fa;
+text-decoration: none;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.project-link a:hover {
+color: #38bdf8;
+gap: 12px;
+}
+
+.soft-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 25px;
+}
+
+.soft-card {
+padding: 35px 20px;
+text-align: center;
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(18px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 22px;
+transition: 0.4s;
+}
+
+.soft-card i {
+font-size: 42px;
+color: #38bdf8;
+margin-bottom: 18px;
+}
+
+.soft-card h3 {
+font-size: 18px;
+}
+
+.soft-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+border-color: #38bdf855;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 30px;
+}
+
+.card {
+background: rgba(255, 255, 255, 0.06);
+backdrop-filter: blur(18px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+padding: 40px 25px;
+border-radius: 25px;
+text-align: center;
+transition: 0.4s;
+cursor: pointer;
+}
+
+.card i {
+font-size: 55px;
+color: #3b82f6;
+margin-bottom: 20px;
+transition: 0.4s;
+}
+
+.card h3 {
+font-size: 21px;
+font-weight: 600;
+}
+
+.card:hover {
+transform: translateY(-12px);
+box-shadow: 0 0 30px rgba(59, 130, 246, 0.45);
+border-color: #3b82f666;
+}
+
+.card:hover i {
+transform: rotate(10deg) scale(1.15);
+color: #60a5fa;
+}
+
+#contact {
+text-align: center;
+}
+
+.contact-text {
+color: #94a3b8;
+font-size: 17px;
+margin-top: -30px;
+margin-bottom: 35px;
+}
+
+.social {
+display: flex;
+justify-content: center;
+gap: 25px;
+flex-wrap: wrap;
+}
+
+.social a {
+width: 65px;
+height: 65px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 18px;
+background: rgba(255, 255, 255, 0.06);
+border: 1px solid rgba(255, 255, 255, 0.1);
+color: #60a5fa;
+font-size: 28px;
+text-decoration: none;
+transition: 0.4s;
+}
+
+.social a:hover {
+transform: translateY(-8px) rotate(5deg);
+color: white;
+background: #2563eb;
+box-shadow: 0 0 30px rgba(59, 130, 246, 0.55);
+}
+
+footer {
+padding: 35px;
+text-align: center;
+font-size: 17px;
+background: #020617;
+color: #94a3b8;
+margin-top: 50px;
+border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-small {
+font-size: 13px;
+margin-top: 8px;
+color: #475569;
+}
+
+.hidden {
+opacity: 0;
+transform: translateY(50px);
+transition: 1s ease;
+}
+
+.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+::-webkit-scrollbar {
+width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+background: #2563eb;
+border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #3b82f6;
+}
+
+::selection {
+background: #3b82f6;
+color: white;
+}
+
+@media (max-width: 1100px) {
+nav {
+padding: 18px 5%;
+}
+
+
+nav ul {
+    gap: 15px;
+}
+
+nav ul li a {
+    font-size: 13px;
+}
+
+.hero {
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+
+}
+
+@media (max-width: 991px) {
+nav {
+padding: 18px 5%;
+}
+
+nav ul {
+    gap: 14px;
+}
+
+.hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 160px;
+}
+
+.left h1 {
+    font-size: 50px;
+}
+
+.left h2 {
+    font-size: 28px;
+}
+
+.left p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.right img {
+    width: 310px;
+    height: 350px;
+    object-position: center 18%;
+}
+
+section {
+    padding: 90px 6%;
+}
+
+}
+
+@media (max-width: 700px) {
+nav {
+flex-direction: column;
+gap: 15px;
+padding: 15px 4%;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+nav ul {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    font-size: 11px;
+}
+
+.hero {
+    padding-top: 180px;
+}
+
+.left h1 {
+    font-size: 38px;
+}
+
+.left h2 {
+    font-size: 21px;
+}
+
+.left h3 {
+    font-size: 20px;
+}
+
+.left p {
+    font-size: 16px;
+    line-height: 29px;
+}
+
+.right img {
+    width: 250px;
+    height: 290px;
+    border-radius: 22px;
+    object-position: center 18%;
+}
+
+.image-wrapper::before {
+    inset: -10px;
+}
+
+.image-wrapper::after {
+    inset: -20px;
+}
+
+section {
+    padding: 80px 5%;
+}
+
+section h1 {
+    font-size: 34px;
+}
+
+.glass {
+    padding: 28px;
+}
+
+.glass p {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.timeline-card {
+    padding: 22px;
+    gap: 15px;
+}
+
+.timeline-card h2 {
+    font-size: 19px;
+}
+
+.timeline-card h3 {
+    font-size: 14px;
+}
+
+.skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.skill-card {
+    padding: 25px 12px;
+}
+
+.skill-card i {
+    font-size: 38px;
+}
+
+.skill-card h3 {
+    font-size: 14px;
+}
+
+.project-grid {
+    grid-template-columns: 1fr;
+}
+
+.soft-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.soft-card {
+    padding: 25px 12px;
+}
+
+.soft-card i {
+    font-size: 34px;
+}
+
+.soft-card h3 {
+    font-size: 14px;
+}
+
+.cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.card {
+    padding: 30px 15px;
+}
+
+.card i {
+    font-size: 42px;
+}
+
+.card h3 {
+    font-size: 17px;
+}
+
+.social a {
+    width: 58px;
+    height: 58px;
+    font-size: 24px;
+}
+
+}
+
+@media (max-width: 450px) {
+nav ul {
+gap: 8px;
+}
+
+
+nav ul li a {
+    font-size: 10px;
+}
+
+.hero-buttons {
+    flex-direction: column;
+    align-items: center;
+}
+
+.left button {
+    width: 210px;
+}
+
+.skill-grid,
+.soft-grid,
+.cards {
+    grid-template-columns: 1fr 1fr;
+}
+
+.timeline-card {
+    flex-direction: column;
+}
+
+
+}
+
+
+.badge {
+display: inline-block;
+padding: 8px 18px;
+margin-bottom: 20px;
+border-radius: 30px;
+background: #2563eb22;
+border: 1px solid #3b82f666;
+color: #93c5fd;
+font-size: 14px;
+font-weight: 500;
+}
+
+.badge i {
+margin-right: 6px;
+color: #facc15;
+}
+
+.soft-card p {
+margin-top: 12px;
+font-size: 14px;
+line-height: 24px;
+color: #cbd5e1;
+}
+
+.vote-fab {
+position: fixed;
+right: 24px;
+bottom: 24px;
+z-index: 1100;
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 14px 24px;
+border: none;
+border-radius: 50px;
+background: linear-gradient(135deg, #f59e0b, #ef4444);
+color: white;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+box-shadow: 0 8px 30px rgba(239, 68, 68, 0.45);
+animation: votePulse 2.5s ease-in-out infinite;
+}
+
+.vote-fab i {
+font-size: 20px;
+}
+
+@keyframes votePulse {
+50% {
+box-shadow: 0 8px 45px rgba(245, 158, 11, 0.75);
+}
+}
+
+.vote-modal {
+position: fixed;
+inset: 0;
+z-index: 2000;
+display: none;
+align-items: center;
+justify-content: center;
+padding: 20px;
+background: rgba(2, 6, 23, 0.8);
+backdrop-filter: blur(6px);
+}
+
+.vote-modal.open {
+display: flex;
+}
+
+.vote-box {
+position: relative;
+max-width: 480px;
+width: 100%;
+padding: 45px 35px 35px;
+text-align: center;
+background: #111c33;
+border: 1px solid #3b82f666;
+border-radius: 28px;
+box-shadow: 0 0 60px rgba(37, 99, 235, 0.4);
+animation: voteIn 0.4s ease;
+}
+
+@keyframes voteIn {
+from {
+opacity: 0;
+transform: scale(0.85);
+}
+}
+
+.vote-badge {
+width: 80px;
+height: 80px;
+margin: 0 auto 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background: linear-gradient(135deg, #f59e0b, #ef4444);
+font-size: 34px;
+}
+
+.vote-box h2 {
+font-size: 30px;
+margin-bottom: 15px;
+color: #60a5fa;
+}
+
+.vote-box p {
+color: #dbeafe;
+line-height: 28px;
+}
+
+.vote-sign {
+margin-top: 18px;
+font-weight: 600;
+color: #38bdf8 !important;
+}
+
+.vote-close {
+position: absolute;
+top: 14px;
+right: 18px;
+background: none;
+border: none;
+color: #94a3b8;
+font-size: 30px;
+cursor: pointer;
+}
+
+@media (max-width: 700px) {
+.vote-fab {
+right: 14px;
+bottom: 14px;
+padding: 12px 18px;
+font-size: 14px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.vote-fab {
+animation: none;
+}
+}
+
+/* ===== Alignment & polish pass ===== */
+
+:root {
+--gold: #fbbf24;
+--card: rgba(255, 255, 255, 0.05);
+--line: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a {
+white-space: nowrap;
+}
+
+.left h1 {
+background: linear-gradient(90deg, #ffffff, #93c5fd);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+}
+
+.badge {
+border-color: rgba(251, 191, 36, 0.5);
+background: rgba(251, 191, 36, 0.1);
+color: var(--gold);
+}
+
+.hero-buttons .vote-open {
+background: linear-gradient(135deg, #f59e0b, #ef4444) !important;
+border: none !important;
+box-shadow: 0 0 25px rgba(239, 68, 68, 0.4) !important;
+}
+
+section {
+max-width: 1300px;
+margin: 0 auto;
+}
+
+#vision,
+#education,
+#projects {
+position: relative;
+}
+
+#vision::before,
+#education::before,
+#projects::before {
+content: "";
+position: absolute;
+inset: 0 -100vw;
+background: rgba(255, 255, 255, 0.025);
+border-top: 1px solid var(--line);
+border-bottom: 1px solid var(--line);
+z-index: -1;
+}
+
+section h1 {
+margin-bottom: 70px;
+}
+
+.glass {
+max-width: 900px;
+text-align: center;
+}
+
+.soft-grid,
+.skill-grid,
+.project-grid {
+max-width: 1150px;
+margin: 0 auto;
+}
+
+.soft-grid {
+grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.soft-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+padding: 35px 24px;
+}
+
+.soft-card i {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 72px;
+height: 72px;
+margin-bottom: 20px;
+border-radius: 20px;
+background: rgba(56, 189, 248, 0.12);
+font-size: 30px;
+}
+
+#vision .soft-card {
+position: relative;
+overflow: hidden;
+}
+
+#vision .soft-card::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 4px;
+background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+
+#vision .soft-card i {
+color: var(--gold);
+background: rgba(251, 191, 36, 0.12);
+}
+
+.timeline {
+max-width: 900px;
+}
+
+.timeline-card {
+align-items: center;
+}
+
+.timeline-card .score {
+margin-top: 4px;
+}
+
+.skill-grid {
+grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.skill-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 170px;
+}
+
+.project-grid {
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.project-card {
+display: flex;
+}
+
+.project-content {
+display: flex;
+flex-direction: column;
+flex: 1;
+}
+
+.project-link {
+margin-top: auto;
+}
+
+.contact-text {
+max-width: 520px;
+margin-left: auto;
+margin-right: auto;
+}
+
+@media (max-width: 991px) {
+.badge {
+margin-left: auto;
+margin-right: auto;
+}
+}
+
+@media (max-width: 700px) {
+nav ul {
+flex-wrap: nowrap;
+justify-content: flex-start;
+overflow-x: auto;
+width: 100%;
+padding-bottom: 6px;
+scrollbar-width: none;
+}
+
+nav ul::-webkit-scrollbar {
+display: none;
+}
+
+nav ul li a {
+font-size: 13px;
+}
+
+.soft-card i {
+width: 56px;
+height: 56px;
+font-size: 24px;
+margin-bottom: 14px;
+}
+
+.project-grid {
+grid-template-columns: 1fr;
+}
+
+.timeline-card {
+flex-direction: row;
+}
+}
+
+@media (max-width: 450px) {
+.timeline-card {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.soft-grid {
+grid-template-columns: 1fr;
+}
+
+#leadership .soft-grid {
+grid-template-columns: 1fr 1fr;
+}
+}
+
+
+#vote {
+text-align: center;
+}
+
+.vote-card {
+max-width: 720px;
+margin: 0 auto;
+padding: 50px 35px;
+border-radius: 30px;
+background: linear-gradient(160deg, rgba(37, 99, 235, 0.2), rgba(124, 58, 237, 0.15));
+border: 1px solid rgba(251, 191, 36, 0.35);
+box-shadow: 0 0 60px rgba(37, 99, 235, 0.2);
+}
+
+.vote-hero-icon {
+width: 110px;
+height: 110px;
+margin: 0 auto 25px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background: linear-gradient(135deg, #f59e0b, #ef4444);
+font-size: 46px;
+cursor: pointer;
+box-shadow: 0 0 40px rgba(239, 68, 68, 0.5);
+animation: votePulse 2.5s ease-in-out infinite;
+transition: transform 0.3s;
+}
+
+.vote-hero-icon:hover,
+.vote-hero-icon:focus-visible {
+transform: scale(1.1);
+outline: none;
+}
+
+.vote-card h1 {
+font-size: 38px;
+margin-bottom: 40px;
+}
+
+.vote-card h3 {
+color: #fbbf24;
+font-size: 22px;
+margin-bottom: 18px;
+}
+
+.vote-card p {
+color: #dbeafe;
+font-size: 17px;
+line-height: 30px;
+max-width: 520px;
+margin: 0 auto;
+}
+
+.vote-tap {
+margin-top: 22px !important;
+color: #94a3b8 !important;
+font-size: 15px !important;
+}
+
+@media (max-width: 700px) {
+.vote-card {
+padding: 40px 22px;
+}
+
+.vote-card h1 {
+font-size: 28px;
+}
+}
+
+
+/* ===== Centered hero ===== */
+.hero {
+flex-direction: column-reverse;
+justify-content: center;
+gap: 60px;
+text-align: center;
+padding-top: 160px;
+}
+
+.left,
+.right {
+flex: none;
+width: 100%;
+}
+
+.left p {
+margin-left: auto;
+margin-right: auto;
+}
+
+.hero-buttons {
+justify-content: center;
+}
+
+.badge {
+margin-left: auto;
+margin-right: auto;
+}
+
+.right img {
+display: block;
+margin: 0 auto;
+}
+</style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<nav id="navbar">
+    <h2>Aryan Tiwari</h2>
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#vision">My Vision</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#vote">Vote</a></li>
+        <li><a href="#contact">Connect</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+    <div class="left">
+        <span class="badge"><i class="fa-solid fa-flag"></i> Candidate for COMPS Co-Captain</span>
+        <h1>I'm Aryan Tiwari</h1>
+        <h2><span class="typing"></span><span class="cursor-line">|</span></h2>
+        <p>
+            Computer Engineering student at D. J. Sanghvi College of Engineering.
+            I want to be the voice of COMPS: someone students can approach,
+            teachers can rely on, and every batch can be proud of.
+        </p>
+        <div class="hero-buttons">
+            <a href="#vision"><button>My Vision <i class="fa-solid fa-arrow-down"></i></button></a>
+            <button class="secondary-btn vote-open" type="button">Vote for Me <i class="fa-solid fa-check-to-slot"></i></button>
+        </div>
+    </div>
+    <div class="right">
+        <div class="image-wrapper">
+            <img src="hero.jpg" alt="Aryan Tiwari">
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <h1>About Me 👤</h1>
+    <div class="glass">
+        <p>
+            I am Aryan Tiwari, a Computer Engineering student at D. J. Sanghvi
+            College of Engineering. I like solving problems, learning by doing
+            and working with people to get things finished.
+        </p>
+        <p>
+            I am standing for COMPS Co-Captain because I want to make it
+            easier for students to be heard, to learn from each other and to
+            take part in everything our department offers.
+        </p>
+    </div>
+</section>
+
+<section id="vision">
+    <h1>My Vision 🎯</h1>
+    <div class="soft-grid">
+        <div class="soft-card">
+            <i class="fa-solid fa-bullhorn"></i>
+            <h3>Your Voice</h3>
+            <p>A simple way to raise problems and suggestions, and pass them on to teachers and the HOD.</p>
+        </div>
+        <div class="soft-card">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <h3>Learning Together</h3>
+            <p>Doubt-solving sessions, shared notes and peer study groups for every year.</p>
+        </div>
+        <div class="soft-card">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>Events &amp; Competitions</h3>
+            <p>Coding contests, workshops and sports events so everyone gets a chance to take part.</p>
+        </div>
+        <div class="soft-card">
+            <i class="fa-solid fa-eye"></i>
+            <h3>Transparency</h3>
+            <p>Regular updates on what was decided, what was done and what is next.</p>
+        </div>
+    </div>
+</section>
+
+<section id="leadership">
+    <h1>Why Choose Me 🤝</h1>
+    <div class="soft-grid">
+        <div class="soft-card"><i class="fa-solid fa-people-group"></i><h3>Teamwork</h3></div>
+        <div class="soft-card"><i class="fa-solid fa-comments"></i><h3>Communication</h3></div>
+        <div class="soft-card"><i class="fa-solid fa-clock"></i><h3>Time Management</h3></div>
+        <div class="soft-card"><i class="fa-solid fa-lightbulb"></i><h3>Problem Solving</h3></div>
+    </div>
+</section>
+
+<section id="vote">
+    <div class="vote-card">
+        <div class="vote-hero-icon vote-open" role="button" tabindex="0" aria-label="Tap to vote for Aryan Tiwari">
+            <i class="fa-solid fa-check-to-slot"></i>
+        </div>
+        <h1>Vote for Aryan Tiwari</h1>
+        <h3>COMPS Co-Captain</h3>
+        <p>
+            Your vote is your voice. Together we can make COMPS more active,
+            more connected and a department every student is proud of.
+        </p>
+        <p class="vote-tap">Tap the icon to vote 👆</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h1>Connect With Me 🔗</h1>
+    <p class="contact-text">Let's connect on LinkedIn.</p>
+    <div class="social">
+        <a href="https://in.linkedin.com/in/aryan-tiwari-475b73284" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>Made with ❤️ by Aryan Tiwari</p>
+    <p class="footer-small">© 2026 Aryan Tiwari. All rights reserved.</p>
+</footer>
+
+<button class="vote-fab vote-open" type="button" aria-label="Vote for Me">
+    <i class="fa-solid fa-check-to-slot"></i>
+    <span>Vote for Me</span>
+</button>
+
+<div class="vote-modal" id="voteModal" role="dialog" aria-modal="true" aria-labelledby="voteTitle">
+    <div class="vote-box">
+        <button class="vote-close" type="button" aria-label="Close">&times;</button>
+        <div class="vote-badge"><i class="fa-solid fa-check-to-slot"></i></div>
+        <h2 id="voteTitle">Thank You! 🙏</h2>
+        <p>
+            Thank you for believing in me and for taking the time to support
+            my journey to become COMPS Co-Captain. Every vote means a lot,
+            and I promise to work with honesty and dedication to make our
+            department better for everyone.
+        </p>
+        <p class="vote-sign">- Aryan Tiwari</p>
+    </div>
+</div>
+
+<script>
+const typing = document.querySelector(".typing");
+
+const words = [
+"COMPS Co-Captain Candidate 🏅",
+"Team Player 🤝",
+"Problem Solver 🧠",
+"Computer Engineering Student 💻"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeEffect() {
+if (!typing) return;
+
+const currentWord = words[wordIndex];
+
+if (!deleting) {
+    typing.textContent = currentWord.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentWord.length) {
+        deleting = true;
+        setTimeout(typeEffect, 1400);
+        return;
+    }
+} else {
+    typing.textContent = currentWord.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+        deleting = false;
+        wordIndex++;
+
+        if (wordIndex === words.length) {
+            wordIndex = 0;
+        }
+    }
+}
+
+setTimeout(typeEffect, deleting ? 55 : 100);
+
+}
+
+typeEffect();
+
+const observer = new IntersectionObserver(
+(entries) => {
+entries.forEach((entry) => {
+if (entry.isIntersecting) {
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+},
+{
+threshold: 0.15
+}
+);
+
+document.querySelectorAll("section").forEach((section) => {
+if (section.id !== "home") {
+section.classList.add("hidden");
+observer.observe(section);
+}
+});
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+function updateActiveNav() {
+let current = "home";
+
+sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 180;
+    const sectionBottom = sectionTop + section.offsetHeight;
+
+    if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionBottom
+    ) {
+        current = section.getAttribute("id");
+    }
+});
+
+navLinks.forEach((link) => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+    }
+});
+
+}
+
+window.addEventListener("scroll", updateActiveNav);
+
+updateActiveNav();
+
+const nav = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+if (!nav) return;
+
+if (window.scrollY > 50) {
+    nav.style.boxShadow = "0 10px 35px rgba(0,0,0,.35)";
+    nav.style.background = "rgba(15,23,42,.88)";
+} else {
+    nav.style.boxShadow = "none";
+    nav.style.background = "rgba(15,23,42,.7)";
+}
+
+});
+
+document.querySelectorAll("button").forEach((button) => {
+button.addEventListener("mouseenter", () => {
+button.style.transform = "translateY(-3px) scale(1.04)";
+});
+
+button.addEventListener("mouseleave", () => {
+    button.style.transform = "";
+});
+
+});
+
+const heroImage = document.querySelector(".right img");
+
+if (heroImage) {
+window.addEventListener("mousemove", (event) => {
+if (window.innerWidth <= 991) return;
+
+    const x = (window.innerWidth / 2 - event.clientX) / 80;
+    const y = (window.innerHeight / 2 - event.clientY) / 80;
+
+    heroImage.style.marginLeft = x + "px";
+    heroImage.style.marginTop = y + "px";
+});
+
+}
+
+document.querySelectorAll(".project-card").forEach((card) => {
+card.addEventListener("mousemove", (event) => {
+if (window.innerWidth <= 700) return;
+
+    const rect = card.getBoundingClientRect();
+
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -2;
+    const rotateY = ((x - centerX) / centerX) * 2;
+
+    card.style.transform =
+        "translateY(-12px) perspective(800px) rotateX(" +
+        rotateX +
+        "deg) rotateY(" +
+        rotateY +
+        "deg)";
+});
+
+card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
+});
+
+
+});
+
+document.querySelectorAll(".skill-card, .soft-card, .card").forEach((card) => {
+card.addEventListener("mouseenter", () => {
+card.style.transform = "translateY(-10px)";
+});
+
+card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
+});
+
+
+});
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+link.addEventListener("click", (event) => {
+const targetId = link.getAttribute("href");
+
+    if (targetId === "#") return;
+
+    const target = document.querySelector(targetId);
+
+    if (target) {
+        event.preventDefault();
+
+        const navHeight = nav ? nav.offsetHeight : 0;
+
+        const targetPosition =
+            target.getBoundingClientRect().top +
+            window.scrollY -
+            navHeight -
+            15;
+
+        window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+        });
+    }
+});
+
+});
+
+document.querySelectorAll(".social a, .project-link a").forEach((link) => {
+link.addEventListener("click", () => {
+link.style.transform = "scale(0.95)";
+
+
+    setTimeout(() => {
+        link.style.transform = "";
+    }, 150);
+});
+
+});
+
+window.addEventListener("load", () => {
+document.body.style.opacity = "0";
+
+
+requestAnimationFrame(() => {
+    document.body.style.transition = "opacity 0.8s ease";
+    document.body.style.opacity = "1";
+});
+});
+
+
+const voteModal = document.getElementById("voteModal");
+
+function toggleVote(open) {
+if (!voteModal) return;
+voteModal.classList.toggle("open", open);
+document.body.style.overflow = open ? "hidden" : "";
+}
+
+document.querySelectorAll(".vote-open").forEach((btn) => {
+btn.addEventListener("keydown", (event) => {
+if (event.key === "Enter" || event.key === " ") { event.preventDefault(); toggleVote(true); }
+});
+btn.addEventListener("click", () => toggleVote(true));
+});
+
+if (voteModal) {
+voteModal.addEventListener("click", (event) => {
+if (event.target === voteModal || event.target.closest(".vote-close")) {
+toggleVote(false);
+}
+});
+}
+
+document.addEventListener("keydown", (event) => {
+if (event.key === "Escape") toggleVote(false);
+});
+
+</script>
+</body>
+</html>
